@@ -1,4 +1,4 @@
-#!/usr/local/bin/pyhton3
+#!/usr/bin/pyhton3
 if __name__ == "__main__":
     import sys
     result = 0
