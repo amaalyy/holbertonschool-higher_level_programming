@@ -3,7 +3,7 @@
 
 
 class Square:
-    """"class square"""
+    """"__init__method"""
 
     def __init__(self, size=0):
         if type(size) != int:
