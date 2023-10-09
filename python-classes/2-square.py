@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-"""class square"""
+"""Class of Square"""
 
 
 class Square:
-    """"__init__method"""
+
+    """__init__ method"""
 
     def __init__(self, size=0):
-        if type(size) != int:
-            raise TypeError("size must be an interger")
-        elif size < 0:
-            raise ValueError("size must me >=0")
+        if (type(size) != int):
+            raise TypeError("size must be an integer")
+        elif (size < 0):
+            raise ValueError("size must be >= 0")
         else:
-            self.__size = size
+            self._Square__size = size
         
