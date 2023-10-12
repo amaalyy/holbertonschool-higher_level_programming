@@ -1,4 +1,4 @@
-#!/uar/bin/python3
+#!/usr/bin/python3
 """class of Rectangle"""
 class Rectangle:
     """__init__ method"""
