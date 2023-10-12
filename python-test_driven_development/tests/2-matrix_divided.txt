@@ -12,3 +12,7 @@ test normal matrix:
 test one el:
 	>>> matrix_divided ([[2]], 2)
 	[[1.0]]
+
+test division by negative:
+	>>> matrix_divided ([[2, 4, 8], [1, 2, 3]], -3)
+	[[-0.67, -1.33, -2.67], [-0.33, -0.67, -1.0]]
