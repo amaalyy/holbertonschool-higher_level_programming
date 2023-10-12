@@ -56,5 +56,6 @@ class Rectangle:
                 if self.height - 1 != i:
                     x += '\n'
             return x
+    """string representation of the rectangle"""
     def __repr__(self):
         return f"Rectangle({self.width},{self.__height})"
