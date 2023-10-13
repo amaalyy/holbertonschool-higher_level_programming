@@ -57,9 +57,10 @@ class Rectangle:
                     x += '\n'
             return x
     """string representation of the rectangle"""
+
     def __repr__(self):
         return f"Rectangle({self.__width},{self.__height})"
     """__del__ method an instance of Rectangle is deleted"""
+
     def __del__(self):
         print("Bye rectangle...")
-    
