@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+"""check for ? . : and prints a text with 2 new lines"""
 def text_indentation(text):
+    """checking"""
     c = 0
     if type(text) is not str:
         raise TypeError("text must be a string")
