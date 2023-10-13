@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """" function that prints My name is <first name> <last name>"""
+
+
 def say_my_name(first_name, last_name=""):
     """check the first and last name to confirm their type is string"""
     if not isinstance(first_name, str):
