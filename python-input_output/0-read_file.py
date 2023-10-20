@@ -5,5 +5,4 @@
 def read_file(filename=""):
     """Read file"""
     with open(filename, 'r', encoding="UTF8") as f:
-        for c in f:
-            print (c)
+        print(f.readlines())
