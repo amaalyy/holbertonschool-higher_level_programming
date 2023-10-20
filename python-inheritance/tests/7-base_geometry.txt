@@ -1,73 +1,41 @@
-This is the testing file for our list sorting module
-testing cases : - ...
-
-setting up the module :
->>> base = __import__('7-base_geometry').BaseGeometry
-
->>> base.integer_validator("my_int", "try")
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> test = BaseGeometry()
+>>> test.integer_validator("int", 105)
+>>> test.integer_validator("float", 153.56)
 Traceback (most recent call last):
 ...
-TypeError: integer_validator() missing 1 required positional argument: 'value'
-
->>> base.integer_validator("my_int", -1)
+TypeError: float must be an integer
+>>> test.integer_validator("inf", 5e999)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
->>> base.integer_validator("age", None)
+TypeError: inf must be an integer
+>>> test.integer_validator("string", "maouia")
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
->>> base.integer_validator("age", {3, 4})
+TypeError: string must be an integer
+>>> test.integer_validator("None", None)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
->>> base.integer_validator("age", 0)
+TypeError: None must be an integer
+>>> test.integer_validator("zero", 0)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
->>> base.integer_validator("age", 1)
-Traceback (most recent call last):
-  File "/usr/lib/python3.10/doctest.py", line 1350, in __run
-    exec(compile(example.source, filename, "single",
-  File "<doctest 7-base_geometry.txt[6]>", line 1, in <module>
-    base.integer_validator("age", 1)
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
->>> base.integer_validator("age", (4,))
+ValueError: zero must be greater than 0
+>>> test.integer_validator("negativ int", -542)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
->>> base.integer_validator("age", [3])
+ValueError: negativ int must be greater than 0
+>>> test.integer_validator("negativ float", -542)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
->>> base.integer_validator("age", True)
+ValueError: negativ float must be greater than 0
+>>> test.integer_validator("negativ float", -542.28)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
->>> base.integer_validator("age")
+TypeError: negativ float must be an integer
+>>> test.integer_validator("bool", True)
+>>> test.integer_validator("bool", False)
 Traceback (most recent call last):
-
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
->>> base.integer_validator()
-Traceback (most recent call last):
-
-TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
-
->>> base.integer_validator("age", True)
-Traceback (most recent call last):
-
-TypeError: integer_validator() missing 1 required positional argument: 'value'
-
->>> base.area()
-Traceback (most recent call last):
-
-TypeError: area() missing 1 required positional argument: 'self'
+...
+ValueError: bool must be greater than 0
+>>>
