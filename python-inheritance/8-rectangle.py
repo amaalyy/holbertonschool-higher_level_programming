@@ -17,7 +17,12 @@ class BaseGeometry:
             raise ValueError(f"{self.name} must be greater than 0")
         else:
             self.value = value
+    """class Rectangle that inherits from BaseGeometry"""
+
+
 class Rectangle(BaseGeometry):
+    """Rectangle """
+
     def __init__(self, width, height):
         self.__width = self.integer_validator("width", width)
         self.height = self.integer_validator("height", height)
