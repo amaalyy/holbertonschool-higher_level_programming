@@ -59,7 +59,8 @@ class Rectangle:
         return (2 * (self.__width + self.__height))
 
     """__str__ method that print a Rectangle of (#)
-    instead of returns a human-readable,string representation of an object."""
+    instead of returns a human-readable,string
+    representation of an object."""
 
     def __str__(self):
         x = ""
@@ -78,7 +79,8 @@ class Rectangle:
     def __repr__(self):
         return (f"Rectangle({self.__width}, {self.__height})")
 
-    """__del__ method is called when an instance of Rectangle is deleted"""
+    """__del__ method is called when an instance of
+      Rectangle is deleted"""
 
     def __del__(self):
         Rectangle.number_of_instances -= 1
