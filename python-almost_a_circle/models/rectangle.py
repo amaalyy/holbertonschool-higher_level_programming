@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 """import class Base"""
+from python-almost_a_circle.a import height
 from models.base import Base
 
 """Class Rectangle"""
@@ -16,7 +17,6 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-
     # width property
     @property
     def width(self):
@@ -24,35 +24,42 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, width):
-        if (isinstance(width, int)):
+        if (type(width) != int):
+            raise TypeError(f"{width} of the attribute> must be an integer")
+        elif (width <= 0):
+            raise ValueError(f"{width} of the attribute> must be > 0")
+        else:
             self.__width = width
 
     # height property
-    @property
-    def height(self):
-        return self.__height
-
+def height(self):
     @height.setter
     def height(self, height):
-        if (isinstance(height, int)):
+        if (type(height) == int):
+            raise TypeError(f"{height} of the attribute> must be an integer")
+        elif (height <= 0):
+            raise ValueError(f"{height} of the attribute> must be > 0")
+        else:
             self.__height = height
 
     # x property
-    @property
-    def x(self):
-        return self.__x
-
+def x(self):
     @x.setter
     def x(self, x):
-        if (isinstance(x, int)):
+        if (type(x) == int):
+            raise TypeError(f"{x} of the attribute> must be an integer")
+        elif (x <= 0):
+            raise ValueError(f"{x} must be >= 0")
+        else:
             self.__x = x
 
     # y property
-    @property
-    def y(self):
-        return self.__y
-
+def y(self):
     @y.setter
     def y(self, y):
-        if (isinstance(y, int)):
+        if (type(y) == int):
+            raise TypeError(f"{y} of the attribute> must be an integer")
+        elif (y <= 0):
+            raise ValueError(f"{y} must be >= 0")
+        else:
             self.__y = y
