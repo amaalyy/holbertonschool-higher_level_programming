@@ -5,9 +5,9 @@
 class Base:
     """private class"""
     __nb_objects = 0
-    """class constructor"""
 
     def __init__(self, id=None):
+        """class constructor"""
         if id is None:
             self.id = id
         else:
