@@ -30,5 +30,7 @@ if __name__ == "__main__":
         lis.append(', ')
     for i in range(len(lis) - 1):
         print(lis[i], end="")
+    print()
+
     cur.close()
     database.close()
